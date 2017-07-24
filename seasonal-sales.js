@@ -58,9 +58,9 @@ let buildWebApp = function() { //this function only runs once all JSON data is l
 
   document.getElementById("seasonalOptions").addEventListener("change", function(e){
 
-    for (var m = 0; m < options.length; m++) { //loop number of options and if the value of the option select == the sectionId at that option in the loop then show section and hid other sections.
+    for (var m = 0; m < options.length; m++) { //loop number of options and if the value of the option select === the sectionId at that option in the loop then show section and hid other sections.
       let thisSection = sectionsToShow[m];
-      if (this.value == sectionIds[m]) {
+      if (Number(this.value) === sectionIds[m]) {
         thisSection.classList.remove("hidden");
         thisSection.classList.add("visible");
       } else {
